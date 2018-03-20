@@ -1,15 +1,5 @@
 <?php
-/**
- * @author Łukasz Socha <kontakt@lukasz-socha.pl>
- * @version: 1.0
- * @license <a class="vglnk" href="http://www.gnu.org/copyleft/lesser.html" rel="nofollow"><span>http</span><span>://</span><span>www</span><span>.</span><span>gnu</span><span>.</span><span>org</span><span>/</span><span>copyleft</span><span>/</span><span>lesser</span><span>.</span><span>html</span></a>
- */
- 
-/**
- * This class includes methods for controllers.
- *
- * @abstract
- */
+
 abstract class Controller{
 	
 	 public function redirect($url) {
@@ -18,7 +8,7 @@ abstract class Controller{
  
    
      public function loadView($name, $path='view/') {
-        $path=$path.$name.'.php';
+        $path=$path.$name.'View.php';
         $name=$name.'View';
         try {
             if(is_file($path)) {
