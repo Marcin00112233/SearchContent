@@ -4,5 +4,9 @@ if($_SERVER['REQUEST_URI']=="/searchcontent/"){
 	$ob = new AllController();
 	$ob -> index();
 }
-else echo "obiekt nie załadował się";
+else if($_GET['module']== 'all' && $_GET['proc'] == 'result'){
+	include 'controller/allcontroller.php';
+	$ob = new AllController();
+	echo $_POST['search'];
+} else echo "obiekt nie załadował się";
 ?>
