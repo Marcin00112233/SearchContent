@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['REQUEST_URI']=="/searchcontent/"){
+if($_SERVER['REQUEST_URI']=="/searchcontent/" or $_SERVER['REQUEST_URI']=="/searchcontent/index.php" ){
 	include 'controller/allcontroller.php';
 	$ob = new AllController();
 	$ob -> index();
