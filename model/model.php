@@ -5,8 +5,8 @@ abstract class Model{
 	
 	public function  __construct() {
         try {
-            require 'config/sql.php';
-            $this->pdo=new PDO('mysql:host='.$host.';dbname='.$dbase, $user, $pass);
+            require 'config/config.php';
+            $this->pdo=new PDO('mysql:host='.$host.';dbname='.$dbname, $user, $passwd);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch(DBException $e) {

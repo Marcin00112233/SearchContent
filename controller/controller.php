@@ -29,7 +29,7 @@ abstract class Controller{
     }
 	
     public function loadModel($name, $path='model/') {
-        $path=$path.$name.'.php';
+        $path=$path.$name.'model.php';
         $name=$name.'Model';
         try {
             if(is_file($path)) {

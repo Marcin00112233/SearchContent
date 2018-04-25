@@ -13,5 +13,10 @@ if($_SERVER['REQUEST_URI']=="/searchcontent/" or $_SERVER['REQUEST_URI']=="/sear
     $ob = new exemplary_data_controller();
     $ob->show_form();
     //echo 'test3';
-} else echo "obiekt nie załadował się";
+} else if ($_GET['module']== 'admin' && $_GET['proc']== 'proc_add'){
+    include 'controller/exemplary_data_controller.php';
+    $ob = new exemplary_data_controller();
+    $ob->load_data_controller();
+}
+else echo "obiekt nie załadował się";
 ?>
