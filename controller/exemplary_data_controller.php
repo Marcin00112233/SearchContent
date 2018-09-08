@@ -8,7 +8,11 @@ class exemplary_data_controller extends controller{
 	}
         public function load_data_controller(){
             $model = $this->loadModel('exemplary_data_');
-            $model->load_data_model();
+            $data = $this->loadModel('load_data_');
+            $model->load_catalog();
+            $model->get_all_links();
+            $model->show_data();
+            
         }
 	
 }
